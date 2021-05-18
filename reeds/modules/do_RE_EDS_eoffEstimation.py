@@ -185,7 +185,7 @@ int
             os.chdir("..")
             out_cnfs = []
             for i in range(len(svals)):
-                file_path = bash.copy_file(optimized_coordinates[i % numstates],
+                file_path = bash.copy_file(optimized_coordinates[i % int(numstates)],
                                    coordinate_dir + "/" + cnf_prefix + "_ssm_" + str(i + 1) + ".cnf")
                 out_cnfs.append(file_path)
             simSystem.coordinates = out_cnfs
